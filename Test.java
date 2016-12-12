@@ -23,21 +23,9 @@ public class Test {
 	private static ISyncDuplexTypedMessageSender<String, String> mySender;
 
 	public static void main(String[] args) {
-		KeyStroke ks = KeyStroke.getKeyStroke('ü', 0);
+		KeyStroke ks = KeyStroke.getKeyStroke('§', 0);
 		System.out.println(ks.getKeyCode());
-		//ks.getKe
-		//System.out.println(KeyEvent.VK_T);
-		try {
-			Robot robot = new Robot();
-			
-			// Simulate a key press
-			robot.keyPress(KeyEvent.VK_WINDOWS);
-			robot.delay(2000);
-			robot.keyRelease(KeyEvent.VK_WINDOWS);
 
-		} catch (AWTException e) {
-			e.printStackTrace();
-		}
 		//ServerBoard s = new ServerBoard();
 		/*
 		try (ServerSocket serverSocket = new ServerSocket(3001);

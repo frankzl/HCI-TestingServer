@@ -6,6 +6,9 @@ import java.lang.reflect.Field;
 
 import javax.swing.KeyStroke;
 
+import org.jnativehook.GlobalScreen;
+import org.jnativehook.NativeHookException;
+
 public class SimpleServer {
 	
 	public static void main(String[] args) throws AWTException{

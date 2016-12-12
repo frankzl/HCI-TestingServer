@@ -3,7 +3,6 @@ import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.StringSelection;
 import java.awt.datatransfer.Transferable;
-import java.util.concurrent.TimeUnit;
 
 public class MyClipboard {
 	
@@ -19,12 +18,20 @@ public class MyClipboard {
 		setSysClipboardText(sysClipboard);
 	}
 	
-	public static void setMyClipboardText(String myString){
+	public static void setUnicodeText(String myString){
 		if(!isStored)
 			storeClipboard();
-		setSysClipboardText(myString);
+		char c = (char) Integer.parseInt( myString.substring(2), 16 );
+		setSysClipboardText(c+"");
 	}
 	
+	public static void setSymbolText(String str){
+		if(!isStored){
+			storeClipboard();
+		}
+		setSysClipboardText(str.substring(2));
+
+	}
 	
 	
 	public static void setSysClipboardText(String myString){
