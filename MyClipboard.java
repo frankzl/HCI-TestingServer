@@ -30,7 +30,6 @@ public class MyClipboard {
 			storeClipboard();
 		}
 		setSysClipboardText(str.substring(2));
-
 	}
 	
 	

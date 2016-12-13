@@ -22,10 +22,12 @@ import eneter.net.system.EventHandler;
 public class Test {
 	private static ISyncDuplexTypedMessageSender<String, String> mySender;
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws AWTException {
 		KeyStroke ks = KeyStroke.getKeyStroke('§', 0);
 		System.out.println(ks.getKeyCode());
-
+		Robot r = new Robot();
+		r.keyPress(50);
+		r.keyRelease(50);
 		//ServerBoard s = new ServerBoard();
 		/*
 		try (ServerSocket serverSocket = new ServerSocket(3001);
